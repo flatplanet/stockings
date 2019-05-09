@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stocking</title>
+    <title>My Stock Market App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +12,19 @@
   </head>
 
   <body>
-    <%= yield %>
+  	
+  	<%= render 'home/navbar' %>
+
+  	<div class="container">
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+      <br/>
+    	<%= yield %>
+    </div>
+
+	<%= render 'home/footer' %>
+
+  
   </body>
 </html>
