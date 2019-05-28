@@ -1,16 +1,22 @@
-<h2>Forgot your password?</h2>
+<div class="col-md-6 offset-md-3">
+  <div class="jumbotron">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  	<h2>Forgot your password?</h2>
+  	<br/>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+	  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+	  <div class="field form-group">
+	    <%= f.label :email %><br />
+	    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+	  </div>
 
-<%= render "devise/shared/links" %>
+	  <div class="actions">
+	    <%= f.submit "Send me reset password instructions", class: 'btn btn-secondary' %>
+	  </div>
+	<% end %>
+	<br/><br/>
+	<%= render "devise/shared/links" %>
+	</div>
+</div>
