@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    StockQuote::Stock.new(api_key: 'pk_16a849fd637243a79fff90fa4d42bc5d')
+    StockQuote::Stock.new(api_key: 'sk_ee584c925f264f28844d3208ed33f440')
         
   	if params[:ticker] == ""
   		@nothing = "Hey! You Forgot To Enter A Symbol"
